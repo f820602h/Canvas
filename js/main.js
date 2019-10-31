@@ -20,6 +20,8 @@ let push = function() {
 	}
 	if (step < history.length - 1) {
 		$('#redo').removeClass('disable')
+	} else {
+		$('#redo').addClass('disable')
 	}
 }
 let undo = function() {
@@ -33,6 +35,9 @@ let undo = function() {
 	if (step == 0) {
 		$('#undo').addClass('disable')
 	}
+	if (step < history.length - 1) {
+		$('#redo').removeClass('disable')
+	}
 }
 let redo = function() {
 	let lastDraw = new Image()
@@ -41,6 +46,9 @@ let redo = function() {
 	lastDraw.onload = function() {
 		ctx.clearRect(0, 0, canvasWidth, canvasHeight)
 		ctx.drawImage(lastDraw, 0, 0)
+	}
+	if (step > 0) {
+		$('#undo').removeClass('disable')
 	}
 	if (step == history.length - 1) {
 		$('#redo').addClass('disable')
