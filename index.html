@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script src="https://kit.fontawesome.com/4a2456f190.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./style/style.css" />
+		<title>Canvas</title>
+	</head>
+	<body>
+		<div class="functionBar">
+			<a href="javascript:;" class="barBtn">
+				<p><i class="fas fa-angle-up"></i></p>
+			</a>
+			<a href="javascript:;" id="save">
+				<span><i class="fas fa-save"></i></span>
+				<p>SAVE</p>
+			</a>
+			<a href="javascript:;" id="clear">
+				<span><i class="fas fa-expand"></i></span>
+				<p>CLEAR ALL</p>
+			</a>
+			<a href="javascript:;" id="undo" class="disable">
+				<span><i class="fas fa-reply"></i></span>
+				<p>UNDO</p>
+			</a>
+			<a href="javascript:;" id="redo" class="disable">
+				<span><i class="fas fa-share"></i></span>
+				<p>REDO</p>
+			</a>
+		</div>
+		<canvas id="draw"></canvas>
+		<div class="toolBar">
+			<a href="javascript:;" class="barBtn">
+				<p><i class="fas fa-angle-down"></i></p>
+			</a>
+			<div class="tools">
+				<a class="brush active" href="javascript:;">
+					<span><i class="fas fa-paint-brush"></i></span>
+				</a>
+				<a class="eraser" href="javascript:;">
+					<span><i class="fas fa-eraser"></i></span>
+				</a>
+			</div>
+			<p>SIZE:<input id="size" type="text" value="10" />px</p>
+			<div class="colorTool">
+				<p>COLOR:</p>
+				<div class="colorBar"></div>
+				<label class="add active">
+					<p><i class="fas fa-plus"></i></p>
+					<input id="colorPicker" type="color" />
+				</label>
+			</div>
+		</div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</html>
